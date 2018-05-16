@@ -1,0 +1,7 @@
+{			
+	"selector":"source.lua"
+	"working_dir": "$project_path",
+	"shell": true,
+	"file_regex": "^(?:(?:\t)|(?:.+: ))(.+):([0-9]+): (.*)$",
+	"cmd": ["c:\\Program Files\\LOVE\\love.exe", "src"]
+}
