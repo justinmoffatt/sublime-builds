@@ -1,0 +1,19 @@
+{
+	"working_dir": "$file_path",
+	"selector": "source.c",
+	"cmd": "gcc \"$file\" -o \"$file_base_name\"",
+	"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+
+	"variants":
+	[
+		{
+			"name": "Run",
+			"shell_cmd": "start cmd.exe @cmd /k \"$file_path/$file_base_name.exe\""
+		},
+		{
+			"name": "Compile & Run",
+			"shell_cmd": "gcc \"$file\" -o \"$file_base_name\" && start cmd.exe @cmd /k \"$file_path/$file_base_name.exe\""
+		}
+	]
+
+}
