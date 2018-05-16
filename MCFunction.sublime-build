@@ -1,0 +1,4 @@
+{
+	"selector":"source.mcfunction",
+    "cmd": ["robocopy", "$project_path/functions/", "C:/Users/Justin/AppData/Roaming/.minecraft/saves/$project_base_name/data/functions/", "*", "/MIR", "/IS", "/np", "/nfl", "/njh", "/njs", "/ndl", "/nc", "/ns"]
+}
