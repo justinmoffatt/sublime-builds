@@ -1,0 +1,4 @@
+{
+	"selector":"source.vhd","source.vhdl",
+    "cmd": ["ghdl", "-a", "-g", "$file"]
+}
