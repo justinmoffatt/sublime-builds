@@ -16,8 +16,8 @@
 		},
 		{
 			"name": "Project Compile",
-			"working_dir": "$project_path/bin/",
-			"shell_cmd": "gcc $project_path/src/*.c -o \"${project_base_name:Default}\""
+			"working_dir": "$project_path",
+			"shell_cmd": "(if not exist bin md bin) && gcc $project_path/src/*.c -o \"${project_base_name:Default}\""
 		},
 		{
 			"name": "Project Run",
@@ -26,8 +26,8 @@
 		},
 		{
 			"name": "Project Compile & Run",
-			"working_dir": "$project_path/bin/",
-			"shell_cmd": "gcc $project_path/src/*.c -o \"${project_base_name:Default}\" && start cmd.exe @cmd /k \"${project_base_name:Default}.exe\""
+			"working_dir": "$project_path",
+			"shell_cmd": "(if not exist bin md bin) && gcc $project_path/src/*.c -o \"bin/${project_base_name:Default}\" && start cmd.exe @cmd /k (\"bin/${project_base_name:Default}.exe\")"
 		}
 	]
 
