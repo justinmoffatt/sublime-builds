@@ -1,7 +1,7 @@
 {
 	"working_dir": "$file_path",
 	"selector": "source.c",
-	"cmd": "gcc *.c -o \"$file_base_name\"",
+	"shell_cmd": "gcc *.c -o \"$file_base_name\"",
 	"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
 
 	"variants":
@@ -13,6 +13,21 @@
 		{
 			"name": "Compile & Run",
 			"shell_cmd": "gcc *.c -o \"$file_base_name\" && start cmd.exe @cmd /k \"$file_path/$file_base_name.exe\""
+		},
+		{
+			"name": "Project Compile",
+			"working_dir": "$project_path/bin/",
+			"shell_cmd": "gcc $project_path/src/*.c -o \"${project_base_name:Default}\""
+		},
+		{
+			"name": "Project Run",
+			"working_dir": "$project_path/bin/",
+			"shell_cmd": "start cmd.exe @cmd /k \"${project_base_name:Default}.exe\""
+		},
+		{
+			"name": "Project Compile & Run",
+			"working_dir": "$project_path/bin/",
+			"shell_cmd": "gcc $project_path/src/*.c -o \"${project_base_name:Default}\" && start cmd.exe @cmd /k \"${project_base_name:Default}.exe\""
 		}
 	]
 
