@@ -1,0 +1,5 @@
+{
+    "selector"		:   "source.tex",
+    "working_dir"	:   "$project_path",
+    "cmd"			:   ["pdflatex", "${project_name}.tex", "&&", "bibtex", "$project_name"]
+}
