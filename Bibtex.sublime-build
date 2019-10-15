@@ -1,0 +1,5 @@
+{
+    "selector"		:   "source.bib",
+    "working_dir"	:   "$project_path",
+    "cmd"			:   ["bibtex", "${project_base_name}"]
+}
